@@ -1,0 +1,12 @@
+{
+	"Game_StateError_MarkCellOperation": "Cannot play game now. Please wait for all players to join and game to start",
+	"Game_StateError_StartPlayingOperation": "Cannot start playing. Please wait for all players to join",
+	"Game_StateError_StopGameOperation": "Cannot stop game now",
+	"Game_StateError_CalculateScoreOperation": "Cannot calculate score. Game is not yet finished",
+	"Game_StateError_StartNewGameOperation": "Cannot start a new game now",
+	"Game_StateError_JoinOperation": "Cannot join the game now",
+	"Game_StateError_GenerateGameBoardOperation": "Cannot generate game board now",
+	"Game_ValidationError_InvalidGameCode": "Game code is required",
+	"Game_DataError_GameUnavailable": "Cannot find game",
+	"Game_ValidationError_IllegalMove": "Sorry, not your turn. Wait for your turn"
+}

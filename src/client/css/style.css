@@ -1,0 +1,27 @@
+.cell{ width:50px; height:50px; clear:none; float:left;background:#ebebeb; border: 1px solid gray;}
+.colorCode {width:40px;height:40px; margin:4px; border-radius:30px; box-shadow: 2px 2px 5px #e8edeb;}
+.colorCode1 {background: #9e8df0;}
+.colorCode2 {background: #f29db0;}
+.colorCode3 {background: #f2e69d;}
+.colorCode4 {background: #bce8d1;}
+.newline {clear:both;float:left;}
+label{line-height:34px;}
+.loader {position:absolute; top:0px; left:0px; margin: auto; height:100%; width:100%; background: #cccccc; opacity: 0.8;z-index: 1;}
+.loader div {text-align:center; padding-top:20%; font-weight:bold;}
+.header, .header-line {line-height: 45px;}
+#qrcode {padding:2px;background:#dfdfdf;}
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+.field  {margin-bottom:10px;}
