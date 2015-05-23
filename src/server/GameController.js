@@ -3,6 +3,7 @@ var gds = require('./GameDataService');
 var gv = require('./GameView');
 var ev = require('./ErrorView');
 var gsm = require('./GameStateMachine');
+var i18n = require('i18n');
 
 exports.GameController = GameController;
 
@@ -14,6 +15,7 @@ function GameController(socketProxy){
 }
 
 GameController.prototype.flushView = function(view, receivers){
+	Logger.log(view);
 	this.SocketProxy.sendView(view, receivers);
 }
 
@@ -83,11 +85,11 @@ GameController.prototype.joinGame = function(data){
 				this.flushView(viewModel, game.getPlayerCodes());
 			} else {
 				//send error view to socket
-				this.flushView(new ev.ErrorView(i18n__('Game_DataError_GameUnavailable')), [data.PlayerCode]);
+				this.flushView(new ev.ErrorView(i18n.__('Game_DataError_GameUnavailable')), [data.PlayerCode]);
 			}
 		} else {
 			//send error view to socket
-			this.flushView(new ev.ErrorView(i18n__('Game_ValidationError_InvalidGameCode')), [data.PlayerCode]);
+			this.flushView(new ev.ErrorView(i18n.__('Game_ValidationError_InvalidGameCode')), [data.PlayerCode]);
 		}
 	}
 	catch(err){
@@ -112,11 +114,11 @@ GameController.prototype.startPlaying = function(data){
 				this.flushView(viewModel, game.getPlayerCodes());
 			} else {
 				//send error view to socket
-				this.flushView(new ev.ErrorView(i18n__('Game_DataError_GameUnavailable')), [data.PlayerCode]);
+				this.flushView(new ev.ErrorView(i18n.__('Game_DataError_GameUnavailable')), [data.PlayerCode]);
 			}
 		} else {
 			//send error view to socket
-			this.flushView(new ev.ErrorView(i18n__('Game_ValidationError_InvalidGameCode')), [data.PlayerCode]);
+			this.flushView(new ev.ErrorView(i18n.__('Game_ValidationError_InvalidGameCode')), [data.PlayerCode]);
 		}
 	}
 	catch(err){
@@ -136,11 +138,11 @@ GameController.prototype.stopGame = function(data){
 				this.startup(data);
 			} else {
 				//send error view to socket
-				this.flushView(new ev.ErrorView(i18n__('Game_DataError_GameUnavailable')), [data.PlayerCode]);
+				this.flushView(new ev.ErrorView(i18n.__('Game_DataError_GameUnavailable')), [data.PlayerCode]);
 			}
 		} else {
 			//send error view to socket
-			this.flushView(new ev.ErrorView(i18n__('Game_ValidationError_InvalidGameCode')), [data.PlayerCode]);
+			this.flushView(new ev.ErrorView(i18n.__('Game_ValidationError_InvalidGameCode')), [data.PlayerCode]);
 		}
 	}
 	catch(err){
@@ -172,15 +174,15 @@ GameController.prototype.markCell = function(data){
 					this.flushView(viewModel, game.getPlayerCodes());
 				} else {
 					//send error view to socket
-					this.flushView(new ev.ErrorView(i18n__('Game_ValidationError_IllegalMove')), [data.PlayerCode]);
+					this.flushView(new ev.ErrorView(i18n.__('Game_ValidationError_IllegalMove')), [data.PlayerCode]);
 				}
 			} else {
 				//send error view to socket
-				this.flushView(new ev.ErrorView(i18n__('Game_DataError_GameUnavailable')), [data.PlayerCode]);
+				this.flushView(new ev.ErrorView(i18n.__('Game_DataError_GameUnavailable')), [data.PlayerCode]);
 			}
 		} else {
 			//send error view to socket
-			this.flushView(new ev.ErrorView(i18n__('Game_ValidationError_InvalidGameCode')), [data.PlayerCode]);
+			this.flushView(new ev.ErrorView(i18n.__('Game_ValidationError_InvalidGameCode')), [data.PlayerCode]);
 		}
 	}
 	catch(err){

@@ -29,6 +29,8 @@ function GameViewModel(caller, loadHandler){
 	
 	if(loadHandler)
 		this.onLoad = function(){loadHandler.call(caller)};
+		
+	this.showHowToPlay();
 }
 
 //for sections visibility
@@ -175,6 +177,13 @@ GameViewModel.prototype.load = function(params){
 	GameViewLoading.enter(this);
 	this.State.updateViewModel(this, null);
 	GameViewIdle.enter(this);
+	
+	if(params) {
+		var requestData = this.constructLoadRequest(params);
+		if(requestData) {
+			this.OnViewRequest(requestData);
+		}
+	}
 }
 
 GameViewModel.prototype.constructLoadRequest = function(params){
