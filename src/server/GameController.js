@@ -15,7 +15,6 @@ function GameController(socketProxy){
 }
 
 GameController.prototype.flushView = function(view, receivers){
-	Logger.log(view);
 	this.SocketProxy.sendView(view, receivers);
 }
 

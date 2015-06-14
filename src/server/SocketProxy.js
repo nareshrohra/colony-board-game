@@ -46,7 +46,6 @@ SocketProxy.prototype.initialize = function(){
 		
 		socket.on("clientData", function(data){
 			Logger.log("data received from client");
-			//Logger.log(data);
 			self.onClientData(data, socket);
 		});
 

@@ -1,10 +1,21 @@
 module.exports = function(grunt) {
+  var exec = require('child_process').execSync;
+  var spawn = require('child_process').spawn;
+			
+  function execCallback(error, stdout, code) {
+    console.log('execCallback called');
+    if (error instanceof Error)
+	  throw error;
+    console.log(stdout);
+  }
+
   var pkg = grunt.file.readJSON('package.json');	
+  
   // Project configuration.
   grunt.initConfig({
     pkg: pkg,
 	clean: {
-		dist: ["dist"],
+		dist: ["dist/"],
 	},
     concat: {
 	  js: {

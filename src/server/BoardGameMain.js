@@ -4,8 +4,7 @@ var Logger = require('./Logger');
 var gc = require('./GameController');
 var cf = require('./ControllerFactory');
 var sp = require('./SocketProxy');
-var express = require('express'),
-	i18n = require("i18n");
+var i18n = require("i18n");
 
 function BoardGameMain(){
 	this.SocketProxy = null;
