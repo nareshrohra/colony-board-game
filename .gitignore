@@ -44,6 +44,6 @@ Temporary Items
 *.txt
 LICENSE
 node_modules/
-src/client/index - Copy.htm
+dist/
 src/server/service.bat
-src/server/service.bat
+npm-debug.log

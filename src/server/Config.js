@@ -1,2 +1,2 @@
 exports.DebugMode = true;
-exports.Port = 8081;
+exports.Port = 8080;

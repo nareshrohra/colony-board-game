@@ -13,6 +13,7 @@ How to install
 
  - node
  - npm
+ - grunt-cli (install with npm command 'npm install -g grunt-cli')
 
 To install dependency packages run this command
 
@@ -28,7 +29,7 @@ To start the server node script, run this command
 
     npm start
 
-The game uses port 8081 for web-socket communication, make sure that the port is available for use and open in firewall. To change the port edit following files 
+The game uses port 8080 for web-socket communication, make sure that the port is available for use and open in firewall. To change the port edit following files. After, editing files re-run the commands for grunt task and starting node script
 
  - src/server/config.js
  - src/client/scripts/app/config.js
