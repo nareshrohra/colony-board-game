@@ -3,7 +3,7 @@ About the game
  - Colony is a board game played between 2 or 4 players. The game is
    build with node as server and html5/javascript as client
     
- - Its a real time, turn based game uses works on websocket protocol for
+ - Its a real time, turn based game and uses works on websocket protocol for
    communication
 
 How to install
