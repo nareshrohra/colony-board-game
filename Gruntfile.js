@@ -89,6 +89,13 @@ module.exports = function(grunt) {
 		src: 'src/client/css/bootstrap/css/*.map',
 		dest: 'dist/css/',
 		filter: 'isFile'
+	  },
+	  cordova: {
+		expand: true,
+		flatten: false,
+		cwd: 'dist',
+		src: '**',
+		dest: 'cordova/www/'
 	  }
 	}
   });
@@ -106,4 +113,5 @@ module.exports = function(grunt) {
   grunt.registerTask('css-update', ['concat:css']);
   grunt.registerTask('html-update', ['copy:html']);
   grunt.registerTask('clean', ['clean']);
+  grunt.registerTask('cordova', ['copy:cordova']);
 };
